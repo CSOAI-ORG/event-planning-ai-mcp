@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "event-planning-ai-mcp"
+version = "1.0.0"
+description = "Event management tools - venue capacity, budgets, schedules, guest lists, catering estimates"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "MEOK AI Labs", email = "hello@meok.ai" },
+]
+keywords = ["mcp", "ai", "tools", "event"]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+event-planning-ai-mcp = "server:mcp.run"
