@@ -5,17 +5,25 @@ build-backend = "hatchling.build"
 [project]
 name = "event-planning-ai-mcp"
 version = "1.0.0"
-description = "Event management tools - venue capacity, budgets, schedules, guest lists, catering estimates"
+description = "MEOK AI Labs — Event management tools powered by MEOK AI Labs."
+authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.10"
-authors = [
-    { name = "MEOK AI Labs", email = "hello@meok.ai" },
+keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "event-planning", "event-management", "conference-planning", "logistics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
 ]
-keywords = ["mcp", "ai", "tools", "event"]
 dependencies = [
     "mcp>=1.0.0",
 ]
 
-[project.scripts]
-event-planning-ai-mcp = "server:mcp.run"
+[project.urls]
+Homepage = "https://meok.ai"
+Repository = "https://github.com/CSOAI-ORG/event-planning-ai-mcp"
+Documentation = "https://meok.ai/docs/event-planning-ai-mcp"
+"Bug Tracker" = "https://github.com/CSOAI-ORG/event-planning-ai-mcp/issues"

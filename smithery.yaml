@@ -1,0 +1,10 @@
+name: event-planning-ai-mcp
+description: "MEOK AI Labs — Event management tools powered by MEOK AI Labs."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/event-planning-ai-mcp
+license: MIT
+categories: [Events, Planning]
+tags: [event-planning, event-management, conference-planning, logistics]
+runtime: python
+entrypoint: server.py
