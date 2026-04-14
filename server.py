@@ -51,8 +51,7 @@ def calculate_venue_capacity(
     layout: str = "theater",
     has_stage: bool = False,
     stage_sqm: float = 0,
-    accessibility_percent: float = 15,
-) -> dict:
+    accessibility_percent: float = 15) -> dict:
     """Calculate venue capacity for different seating layouts.
 
     Args:
@@ -100,8 +99,7 @@ def plan_budget(
     budget_total: float = 0,
     currency: str = "GBP",
     items: list[dict] | None = None,
-    include_contingency: bool = True,
-) -> dict:
+    include_contingency: bool = True) -> dict:
     """Create an event budget plan with cost breakdowns and tracking.
 
     Args:
@@ -185,8 +183,7 @@ def optimize_schedule(
     start_time: str = "09:00",
     end_time: str = "17:00",
     break_duration_min: int = 15,
-    lunch_duration_min: int = 60,
-) -> dict:
+    lunch_duration_min: int = 60) -> dict:
     """Optimize event schedule with breaks, room assignments, and time slots.
 
     Args:
@@ -275,8 +272,7 @@ def optimize_schedule(
 def manage_guest_list(
     guests: list[dict],
     table_size: int = 10,
-    vip_priority: bool = True,
-) -> dict:
+    vip_priority: bool = True) -> dict:
     """Manage guest list with RSVP tracking, dietary needs, and table assignments.
 
     Args:
@@ -365,8 +361,7 @@ def estimate_catering(
     quality_tier: str = "mid",
     dietary_split: dict | None = None,
     drinks_package: bool = True,
-    currency: str = "GBP",
-) -> dict:
+    currency: str = "GBP") -> dict:
     """Estimate catering costs and quantities for an event.
 
     Args:
