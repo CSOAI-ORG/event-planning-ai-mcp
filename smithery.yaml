@@ -1,10 +1,95 @@
 name: event-planning-ai-mcp
-description: "MEOK AI Labs — Event management tools powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/event-planning-ai-mcp
-license: MIT
-categories: [Events, Planning]
-tags: [event-planning, event-management, conference-planning, logistics]
-runtime: python
-entrypoint: server.py
+description: '> Event management tools - venue capacity, budgets, schedules, guest
+  lists, catering estimates'
+version: 1.0.0
+tools:
+- name: calculate_venue_capacity
+  description: Calculate venue capacity for different seating layouts.
+  parameters:
+  - name: area_sqm
+    type: number
+    required: true
+  - name: layout
+    type: string
+    required: false
+  - name: has_stage
+    type: boolean
+    required: false
+  - name: stage_sqm
+    type: number
+    required: false
+  - name: accessibility_percent
+    type: number
+    required: false
+- name: plan_budget
+  description: Create an event budget plan with cost breakdowns and tracking.
+  parameters:
+  - name: event_type
+    type: string
+    required: true
+  - name: guest_count
+    type: integer
+    required: true
+  - name: budget_total
+    type: number
+    required: false
+  - name: currency
+    type: string
+    required: false
+  - name: items
+    type: string
+    required: false
+  - name: include_contingency
+    type: boolean
+    required: false
+- name: optimize_schedule
+  description: Optimize event schedule with breaks, room assignments, and time slots.
+  parameters:
+  - name: sessions
+    type: array
+    required: true
+  - name: start_time
+    type: string
+    required: false
+  - name: end_time
+    type: string
+    required: false
+  - name: break_duration_min
+    type: integer
+    required: false
+  - name: lunch_duration_min
+    type: integer
+    required: false
+- name: manage_guest_list
+  description: Manage guest list with RSVP tracking, dietary needs, and table assignments.
+  parameters:
+  - name: guests
+    type: array
+    required: true
+  - name: table_size
+    type: integer
+    required: false
+  - name: vip_priority
+    type: boolean
+    required: false
+- name: estimate_catering
+  description: Estimate catering costs and quantities for an event.
+  parameters:
+  - name: guest_count
+    type: integer
+    required: true
+  - name: meal_type
+    type: string
+    required: false
+  - name: quality_tier
+    type: string
+    required: false
+  - name: dietary_split
+    type: string
+    required: false
+  - name: drinks_package
+    type: boolean
+    required: false
+  - name: currency
+    type: string
+    required: false

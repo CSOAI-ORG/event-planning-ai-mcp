@@ -3,6 +3,11 @@ Event Planning AI MCP Server
 Event management tools powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import math
 from datetime import date, datetime, timedelta
@@ -51,7 +56,7 @@ def calculate_venue_capacity(
     layout: str = "theater",
     has_stage: bool = False,
     stage_sqm: float = 0,
-    accessibility_percent: float = 15) -> dict:
+    accessibility_percent: float = 15, api_key: str = "") -> dict:
     """Calculate venue capacity for different seating layouts.
 
     Args:
@@ -61,6 +66,10 @@ def calculate_venue_capacity(
         stage_sqm: Stage area in sqm (auto-calculated if has_stage=True and stage_sqm=0)
         accessibility_percent: Percentage of floor space reserved for aisles/accessibility (default 15%)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("calculate_venue_capacity")
 
     if has_stage and stage_sqm == 0:
@@ -99,7 +108,7 @@ def plan_budget(
     budget_total: float = 0,
     currency: str = "GBP",
     items: list[dict] | None = None,
-    include_contingency: bool = True) -> dict:
+    include_contingency: bool = True, api_key: str = "") -> dict:
     """Create an event budget plan with cost breakdowns and tracking.
 
     Args:
@@ -110,6 +119,10 @@ def plan_budget(
         items: Custom budget items: list of dicts with keys: category, description, cost, quantity (optional)
         include_contingency: Add 10% contingency buffer
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("plan_budget")
 
     typical_splits = {
@@ -183,7 +196,7 @@ def optimize_schedule(
     start_time: str = "09:00",
     end_time: str = "17:00",
     break_duration_min: int = 15,
-    lunch_duration_min: int = 60) -> dict:
+    lunch_duration_min: int = 60, api_key: str = "") -> dict:
     """Optimize event schedule with breaks, room assignments, and time slots.
 
     Args:
@@ -193,6 +206,10 @@ def optimize_schedule(
         break_duration_min: Break duration in minutes
         lunch_duration_min: Lunch break duration in minutes
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("optimize_schedule")
 
     start_dt = datetime.strptime(start_time, "%H:%M")
@@ -272,7 +289,7 @@ def optimize_schedule(
 def manage_guest_list(
     guests: list[dict],
     table_size: int = 10,
-    vip_priority: bool = True) -> dict:
+    vip_priority: bool = True, api_key: str = "") -> dict:
     """Manage guest list with RSVP tracking, dietary needs, and table assignments.
 
     Args:
@@ -280,6 +297,10 @@ def manage_guest_list(
         table_size: Seats per table
         vip_priority: Seat VIPs at front tables
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("manage_guest_list")
 
     total = len(guests)
@@ -361,7 +382,7 @@ def estimate_catering(
     quality_tier: str = "mid",
     dietary_split: dict | None = None,
     drinks_package: bool = True,
-    currency: str = "GBP") -> dict:
+    currency: str = "GBP", api_key: str = "") -> dict:
     """Estimate catering costs and quantities for an event.
 
     Args:
@@ -372,6 +393,10 @@ def estimate_catering(
         drinks_package: Include drinks in estimate
         currency: Currency code
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("estimate_catering")
 
     costs = CATERING_COSTS_PER_HEAD.get(meal_type, CATERING_COSTS_PER_HEAD["buffet"])

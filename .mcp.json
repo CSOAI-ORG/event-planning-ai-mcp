@@ -1,24 +1,149 @@
 {
   "name": "event-planning-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Event management tools powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/event-planning-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> Event management tools - venue capacity, budgets, schedules, guest lists, catering estimates",
+  "version": "1.0.0",
   "tools": [
-    "calculate_venue_capacity",
-    "plan_budget",
-    "optimize_schedule",
-    "manage_guest_list",
-    "estimate_catering"
-  ],
-  "categories": [
-    "Events",
-    "Planning"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "calculate_venue_capacity",
+      "description": "Calculate venue capacity for different seating layouts.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "area_sqm": {
+            "type": "number"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "has_stage": {
+            "type": "boolean"
+          },
+          "stage_sqm": {
+            "type": "number"
+          },
+          "accessibility_percent": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "area_sqm"
+        ]
+      }
+    },
+    {
+      "name": "plan_budget",
+      "description": "Create an event budget plan with cost breakdowns and tracking.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "event_type": {
+            "type": "string"
+          },
+          "guest_count": {
+            "type": "integer"
+          },
+          "budget_total": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "items": {
+            "type": "string"
+          },
+          "include_contingency": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "event_type",
+          "guest_count"
+        ]
+      }
+    },
+    {
+      "name": "optimize_schedule",
+      "description": "Optimize event schedule with breaks, room assignments, and time slots.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sessions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          },
+          "break_duration_min": {
+            "type": "integer"
+          },
+          "lunch_duration_min": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "sessions"
+        ]
+      }
+    },
+    {
+      "name": "manage_guest_list",
+      "description": "Manage guest list with RSVP tracking, dietary needs, and table assignments.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guests": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "table_size": {
+            "type": "integer"
+          },
+          "vip_priority": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "guests"
+        ]
+      }
+    },
+    {
+      "name": "estimate_catering",
+      "description": "Estimate catering costs and quantities for an event.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_count": {
+            "type": "integer"
+          },
+          "meal_type": {
+            "type": "string"
+          },
+          "quality_tier": {
+            "type": "string"
+          },
+          "dietary_split": {
+            "type": "string"
+          },
+          "drinks_package": {
+            "type": "boolean"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "guest_count"
+        ]
+      }
+    }
+  ]
 }
