@@ -14,7 +14,7 @@ from datetime import date, datetime, timedelta
 from collections import defaultdict
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("event-planning-ai-mcp")
+mcp = FastMCP("event-planning-ai", instructions="MEOK AI Labs MCP Server")
 
 _call_counts: dict[str, list[float]] = defaultdict(list)
 FREE_TIER_LIMIT = 30
