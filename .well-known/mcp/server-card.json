@@ -1,0 +1,56 @@
+{
+  "name": "event-planning-ai",
+  "description": "Event Planning Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/event-planning-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "calculate_venue_capacity",
+      "description": "Calculate venue capacity for different seating layouts."
+    },
+    {
+      "name": "plan_budget",
+      "description": "Create an event budget plan with cost breakdowns and tracking."
+    },
+    {
+      "name": "optimize_schedule",
+      "description": "Optimize event schedule with breaks, room assignments, and time slots."
+    },
+    {
+      "name": "manage_guest_list",
+      "description": "Manage guest list with RSVP tracking, dietary needs, and table assignments."
+    },
+    {
+      "name": "estimate_catering",
+      "description": "Estimate catering costs and quantities for an event."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
