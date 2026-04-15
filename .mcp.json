@@ -1,6 +1,6 @@
 {
   "name": "event-planning-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "AI-powered event planning ai MCP server for agents. Supports calculate venue capacity, plan budget, optimize schedule. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
