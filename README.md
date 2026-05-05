@@ -1,56 +1,38 @@
-# Event Planning AI MCP
+<div align="center">
 
-> Event management tools - venue capacity, budgets, schedules, guest lists, catering estimates
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/event-planning-ai-mcp)](https://github.com/CSOAI-ORG/event-planning-ai-mcp/stargazers)
 
-Built by **MEOK AI Labs** | [meok.ai](https://meok.ai)
+# ueventU planningU aiU mcp
 
-## Features
+**Built by **MEOK AI Labs** | [meok.ai](https://meok.ai)**
 
-| Tool | Description |
-|------|-------------|
-| `calculate_venue_capacity` | See tool docstring for details |
-| `plan_budget` | See tool docstring for details |
-| `optimize_schedule` | See tool docstring for details |
-| `manage_guest_list` | See tool docstring for details |
-| `estimate_catering` | See tool docstring for details |
+[![npm version](https://img.shields.io/npm/v/@meok-ai/event-planning-ai-mcp)](https://www.npmjs.com/package/@meok-ai/event-planning-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/event-planning-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
-pip install mcp
+pip install event-planning-ai-mcp
+# or
+npm install -g @meok-ai/event-planning-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-### As an MCP Server
+See the project repository for full documentation and examples.
 
-```bash
-python server.py
-```
+## Enterprise Support
 
-### Claude Desktop Configuration
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "event-planning-ai-mcp": {
-      "command": "python",
-      "args": ["/path/to/event-planning-ai-mcp/server.py"]
-    }
-  }
-}
-```
-
-## Rate Limits
-
-Free tier includes **30-50 calls per tool per day**. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-Built with FastMCP by MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
