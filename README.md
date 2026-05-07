@@ -1,3 +1,5 @@
+[![event-planning-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/event-planning-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/event-planning-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/event-planning-ai-mcp)](https://github.com/CSOAI-ORG/event-planning-ai-mcp/stargazers)
