@@ -1,0 +1,28 @@
+{
+  "name": "event-planning-ai-mcp",
+  "title": "Event Planning Ai Mcp",
+  "description": "AI-powered event planning ai MCP server for agents. Supports calculate venue capacity, plan budget, optimize schedule. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "calculate_venue_capacity"
+    },
+    {
+      "name": "plan_budget"
+    },
+    {
+      "name": "optimize_schedule"
+    },
+    {
+      "name": "manage_guest_list"
+    },
+    {
+      "name": "estimate_catering"
+    }
+  ]
+}

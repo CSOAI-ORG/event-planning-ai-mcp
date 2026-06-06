@@ -1,0 +1,36 @@
+# event-planning-ai-mcp
+# **Event Planning AI MCP Server**
+
+## Install
+```bash
+pip install event-planning-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `calculate_venue_capacity`
+Calculate venue capacity for different seating layouts.
+
+### `plan_budget`
+Create an event budget plan with cost breakdowns and tracking.
+
+### `optimize_schedule`
+Optimize event schedule with breaks, room assignments, and time slots.
+
+### `manage_guest_list`
+Manage guest list with RSVP tracking, dietary needs, and table assignments.
+
+### `estimate_catering`
+Estimate catering costs and quantities for an event.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

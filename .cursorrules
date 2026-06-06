@@ -1,0 +1,9 @@
+# event-planning-ai-mcp - Auto-trigger Rules
+
+When the user asks about event planning, use event-planning-ai-mcp tools: calculate_venue_capacity, plan_budget, optimize_schedule, manage_guest_list, estimate_catering
+
+**Event Planning AI MCP Server**
+
+Install: `pip install event-planning-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
