@@ -1,0 +1,68 @@
+{
+  "name": "event-planning-ai-mcp",
+  "description": "Event Planning Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/event-planning-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "calculate_venue_capacity",
+      "name": "Calculate Venue Capacity",
+      "description": "calculate_venue_capacity via event-planning-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "plan_budget",
+      "name": "Plan Budget",
+      "description": "plan_budget via event-planning-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "optimize_schedule",
+      "name": "Optimize Schedule",
+      "description": "optimize_schedule via event-planning-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "manage_guest_list",
+      "name": "Manage Guest List",
+      "description": "manage_guest_list via event-planning-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "estimate_catering",
+      "name": "Estimate Catering",
+      "description": "estimate_catering via event-planning-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

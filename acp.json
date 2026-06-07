@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "event-planning-ai-mcp",
+    "description": "Event Planning Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "event-planning-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "calculate_venue_capacity",
+      "plan_budget",
+      "optimize_schedule",
+      "manage_guest_list",
+      "estimate_catering"
+    ]
+  }
+}
